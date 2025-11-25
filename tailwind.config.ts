@@ -10,9 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        body: ['"Roboto Mono"', 'monospace'],
+        headline: ['"Roboto Mono"', 'monospace'],
+        code: ['"Roboto Mono"', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -88,10 +88,22 @@ export default {
             height: '0',
           },
         },
+        'pulse-green': {
+          '50%': {
+            boxShadow: '0 0 12px 3px hsl(var(--primary) / 0.7)',
+          },
+        },
+        'pulse-red': {
+          '50%': {
+            boxShadow: '0 0 12px 3px hsl(var(--destructive) / 0.7)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-green': 'pulse-green 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-red': 'pulse-red 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
     },
   },
